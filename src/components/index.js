@@ -1,1 +1,1 @@
-export { default } from './App/App'
+export { default as AppComponent } from './App'

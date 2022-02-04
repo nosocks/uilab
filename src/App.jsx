@@ -1,8 +1,11 @@
-import AppComponent from './components'
+import { AppComponent } from './components'
 
 function App() {
   return (
-    <AppComponent />
+    <AppComponent
+      componentsGlob={import.meta.glob('./testui/**/*.jsx')}
+      sidebarTitle="UITEST"
+    />
   )
 }
 
