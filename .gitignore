@@ -6,3 +6,4 @@ dist-ssr
 .npmrc
 /react/
 /src/**/**/pnpm-lock.yaml
+.pnpm-debug.log

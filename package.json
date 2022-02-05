@@ -1,6 +1,6 @@
 {
   "name": "@nosocks/uilab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "uilab": "./src/index.js"
   },
