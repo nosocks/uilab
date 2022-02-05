@@ -1,4 +1,4 @@
-const Button = ({ text = 'btn', disabled = false }) => (
+const Button = ({ text = 'btn', disabled = false, ...rest }) => (
   <button
     type="button"
     className={`
@@ -9,6 +9,7 @@ const Button = ({ text = 'btn', disabled = false }) => (
           : 'bg-indigo-600 hover:bg-indigo-700'
       }
     `}
+    {...rest}
   >
     {text}
   </button>

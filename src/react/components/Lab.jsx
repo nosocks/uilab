@@ -12,7 +12,13 @@ const Lab = ({ lab = undefined, path = '', srcComp = undefined }) => {
     if (lab) {
       ;(async () => {
         const asyncLabs = await lab()
-        setLabs(asyncLabs)
+        if (asyncLabs.deps) {
+          const { deps, ...restLabs } = asyncLabs
+          setScope((state) => ({ ...state, ...deps }))
+          setLabs(restLabs)
+        } else {
+          setLabs(asyncLabs)
+        }
       })()
     }
 
@@ -24,9 +30,10 @@ const Lab = ({ lab = undefined, path = '', srcComp = undefined }) => {
 
   useEffect(() => {
     if (path && srcComp) {
-      setScope({
+      setScope((state) => ({
+        ...state,
         [`${path[0].toUpperCase()}${path.substring(1)}`]: lazy(srcComp),
-      })
+      }))
     }
   }, [path, srcComp])
 

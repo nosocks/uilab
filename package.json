@@ -6,9 +6,6 @@
     "url": "https://github.com/nosocks/uilab.git"
   },
   "main": "./react/index.js",
-  "bin": {
-    "uilab": "./src/index.js"
-  },
   "engines": {
     "node": ">=16.0.0"
   },
@@ -17,13 +14,9 @@
     "dev:react": "FRAMEWORK=react vite",
     "build:react": "FRAMEWORK=react vite build",
     "preview:react": "FRAMEWORK=react vite preview",
-    "lint:react": "eslint --fix --ext .jsx src/react/",
-    "start:create": "node src/index.js"
+    "lint:react": "eslint --fix --ext .jsx src/react/"
   },
   "dependencies": {
-    "chalk": "^5.0.0",
-    "colorette": "^2.0.16",
-    "inquirer": "^8.2.0",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

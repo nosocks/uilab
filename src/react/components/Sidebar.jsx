@@ -23,7 +23,7 @@ const Sidebar = ({ title, tree }) => {
 
   return (
     <div className="font bg-white p-10 flex-1 shadow-sm max-w-[300px]">
-      <div className="flex space-x-2">
+      <div className="flex space-x-2 mb-2">
         <span className="ml-auto cursor-pointer hover:bg-gray-50 border-sm px-2 py-1 transition-all duration-200 ease-in-out">
           <CollapseIcon />
         </span>
