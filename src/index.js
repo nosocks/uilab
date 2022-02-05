@@ -59,7 +59,7 @@ inquirer.prompt(questions).then(({ template, name }) => {
     return
   }
   fs.mkdirSync(targetPath)
-  createDirectoryContent(templatePath, name)
+  createDirectoryContent(cwd, templatePath, name)
   console.log(
     bold(
       green(`Done! now cd into ${name} and install the project dependencies.`)
