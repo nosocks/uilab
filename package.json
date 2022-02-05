@@ -1,13 +1,24 @@
 {
-  "name": "uilab",
-  "version": "0.0.0",
+  "name": "@nosocks/uilab",
+  "version": "1.0.0",
+  "bin": {
+    "uilab": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint --fix --ext .jsx src/"
+    "prepare": "run-p build:*",
+    "dev:react": "FRAMEWORK=react vite",
+    "build:react": "FRAMEWORK=react vite build",
+    "preview:react": "FRAMEWORK=react vite preview",
+    "lint:react": "eslint --fix --ext .jsx src/react/",
+    "start:create": "node src/index.js"
   },
   "dependencies": {
+    "chalk": "^5.0.0",
+    "colorette": "^2.0.16",
+    "inquirer": "^8.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-element-to-jsx-string": "^14.3.4",
@@ -25,6 +36,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.15",
