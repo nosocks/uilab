@@ -27,7 +27,7 @@ const questions = [
 ]
 
 const createDirectoryContent = (cwd, templatePath, projectName) => {
-  const skip = ['node_modules']
+  const skip = ['node_modules', 'pnpm-lock.yaml']
   const filesToCreate = fs.readdirSync(templatePath)
   filesToCreate.forEach((file) => {
     const origFilePath = path.join(templatePath, file)

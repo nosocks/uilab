@@ -5,3 +5,4 @@ dist-ssr
 *.local
 .npmrc
 /react/
+/src/**/**/pnpm-lock.yaml
