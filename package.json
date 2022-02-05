@@ -1,6 +1,10 @@
 {
   "name": "@nosocks/uilab",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nosocks/uilab.git"
+  },
   "bin": {
     "uilab": "./src/index.js"
   },
@@ -9,6 +13,7 @@
   },
   "scripts": {
     "prepare": "run-p build:*",
+    "postinstall": "run-p build:*",
     "dev:react": "FRAMEWORK=react vite",
     "build:react": "FRAMEWORK=react vite build",
     "preview:react": "FRAMEWORK=react vite preview",
