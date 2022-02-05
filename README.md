@@ -16,8 +16,10 @@ From scratch, uilab supports the same templates as vite:
 
 ### Example lab
 
+A lab must end in `.lab.[ext]` and be named exactly as the component it is testing: `Card.lab.vue`
+
   ```js
-  // hello.lab.jsx
+  // Hello.lab.jsx
   import Hello from './Hello'
 
   export const asDefault = <Hello text="hola" />
@@ -27,7 +29,7 @@ From scratch, uilab supports the same templates as vite:
   if an exported "experiment" prop has a dependency of another component, export a `deps` object.
 
   ```js
-  // hello.lab.jsx
+  // Hello.lab.jsx
   import Hello from './Hello'
   import World from './World'
 
