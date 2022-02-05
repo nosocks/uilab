@@ -67,7 +67,7 @@ uilabs is just a set of components that receives props to render your components
   ```js
     // react
     <AppComponent
-      componentsGlob={import.meta.glob('./components/**/*.jsx')}
+      components={import.meta.glob('./components/**/*.jsx')}
       sidebarTitle="COOL_LAB"
     />
   ```
