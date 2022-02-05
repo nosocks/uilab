@@ -42,10 +42,7 @@ const createDirectoryContent = (cwd, templatePath, projectName) => {
     } else if (stats.isDirectory()) {
       fs.mkdirSync(path.join(cwd, projectName, file))
       // copy files/folder inside current folder recursively
-      createDirectoryContent(
-        path.join(templatePath, file),
-        path.join(projectName, file)
-      )
+      createDirectoryContent(cwd, origFilePath, path.join(projectName, file))
     }
   })
 }
@@ -62,7 +59,9 @@ inquirer.prompt(questions).then(({ template, name }) => {
   createDirectoryContent(cwd, templatePath, name)
   console.log(
     bold(
-      green(`Done! now cd into ${name} and install the project dependencies.`)
+      green(
+        `Your new vite + uilab project is ready! cd into /${name}/ and install the project dependencies.`
+      )
     )
   )
 })
