@@ -27,7 +27,7 @@ From scratch, uilab supports the same templates as vite:
    ```js
    import { AppComponent } from '@nosocks/uilab/react'
    // this is required
-   import '@nosocks/uilab/react/styles.css'
+   import '@nosocks/uilab/react/style.css'
 
    const App = () => (
       <AppComponent
