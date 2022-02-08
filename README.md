@@ -1,6 +1,6 @@
 <h3 align="center">uilab</h3>
 
-<p align="center">A live component developing environment, powered by [vite](https://vitejs.dev).</p>
+<p align="center">A live component developing environment, powered by <a href="https://vitejs.dev">vite</a>.</p>
 
 <p align="center">
   <img style="border-radius:8px;margin:auto;" src="preview.png" />
@@ -67,7 +67,7 @@ uilabs is just a set of components that receives props to render your components
   ```js
     // react
     <AppComponent
-      componentsGlob={import.meta.glob('./components/**/*.jsx')}
+      components={import.meta.glob('./components/**/*.jsx')}
       sidebarTitle="COOL_LAB"
     />
   ```
