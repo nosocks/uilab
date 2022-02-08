@@ -1,11 +1,14 @@
 {
   "name": "@nosocks/uilab",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/nosocks/uilab.git"
   },
   "main": "./react/index.js",
+  "files": [
+    "/react"
+  ],
   "engines": {
     "node": ">=16.0.0"
   },
